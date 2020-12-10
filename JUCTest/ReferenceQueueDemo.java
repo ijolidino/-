@@ -5,6 +5,9 @@ import java.lang.ref.WeakReference;
 
 public class ReferenceQueueDemo {
     public static void main(String[] args) throws InterruptedException {
+        /*
+        使用虚引用引用队列
+         */
         Object o1 = new Object();
         ReferenceQueue<Object> queue = new ReferenceQueue<>();
         WeakReference<Object> weakReference = new WeakReference<>(o1, queue);
