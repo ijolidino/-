@@ -1,4 +1,4 @@
-package JUCTest;
+package ErrorAndException;
 
 public class StackOverflowErrorDemo {
     public static void main(String[] args) {
