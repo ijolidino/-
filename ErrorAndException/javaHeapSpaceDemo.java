@@ -1,4 +1,4 @@
-package JUCTest;
+package ErrorAndException;
 
 import java.util.Random;
 
