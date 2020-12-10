@@ -13,11 +13,11 @@ class HoldLockThread implements Runnable{
     public void run() {
         synchronized (lockA){
             System.out.println(Thread.currentThread().getName()+"持有"+lockA+"尝试获取"+lockB);
-//            try {
-//                TimeUnit.SECONDS.sleep(2);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                TimeUnit.SECONDS.sleep(2);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             synchronized (lockB){
                 System.out.println(Thread.currentThread().getName()+"持有"+lockB+"尝试获取"+lockA);
             }
