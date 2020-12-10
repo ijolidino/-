@@ -3,6 +3,7 @@ package ErrorAndException;
 import java.util.ArrayList;
 
 public class GCOverHeadDemo {
+    //OutOfMemoryError
     public static void main(String[] args) {
         int i=0;
         ArrayList<Object> list = new ArrayList<>();

@@ -6,6 +6,7 @@ public class StackOverflowErrorDemo {
     }
     private static void stackOverflowError(){
         //递归调用把栈空间撑爆，这是error
+        //OutOfMemoryError
         stackOverflowError();//stackOverflowError
     }
 }
