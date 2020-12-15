@@ -12,11 +12,11 @@
 
 查看chkconfig命令设置自动启动
 
-![](E:\Test\Testcode\JavaSE\Linux常用命令\运行级别runlevel（centos6）.PNG)
+![](运行级别runlevel（centos6）.PNG)
 
 ​	查看chkconfig  --list|grep xxx
 
-![](E:\Test\Testcode\JavaSE\Linux常用命令\chkconfig --list.PNG)
+![](chkconfig --list.PNG)
 
 ​	chkconfig  --level 5 服务名 on
 
@@ -24,4 +24,4 @@
 
 # centos7
 
-![](E:\Test\Testcode\JavaSE\Linux常用命令\常用命令centos7（与6区分）.PNG)
+![](常用命令centos7（与6区分）.PNG)

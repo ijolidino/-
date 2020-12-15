@@ -2,7 +2,7 @@
 
 ## 流程图
 
-![](E:\Test\Testcode\JavaSE\git分支相关命令\git工作流.PNG)
+![](git工作流.PNG)
 
 ## 1、创建分支 
 
