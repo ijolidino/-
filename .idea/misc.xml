@@ -7,6 +7,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/../../Project/shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Project/RuoYi/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Project/shiro_test/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Project/com.blackmagic/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Project/firstshirotest/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Project/springboot-shiro-main/pom.xml" />
       </list>
     </option>
   </component>
