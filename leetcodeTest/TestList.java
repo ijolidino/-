@@ -17,6 +17,7 @@ public class TestList {
         Iterator<String> iterator=list.iterator();
        // list.set(0,"2");无事
         //list.remove(0);ConcurrentModificationException
+        //不能remove或者add，否则会出现上述异常
         while(iterator.hasNext()){
             String item=iterator.next();
             if(item=="1"){
