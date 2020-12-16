@@ -15,7 +15,8 @@ public class TestList {
         System.out.println("遍历修改前"+list.size());
         list.get(0);
         Iterator<String> iterator=list.iterator();
-
+       // list.set(0,"2");无事
+        //list.remove(0);ConcurrentModificationException
         while(iterator.hasNext()){
             String item=iterator.next();
             if(item=="1"){
