@@ -1,3 +1,5 @@
+package leetcodeTest;
+
 public class Singleton {
 public static class S{
     public static final Singleton INSTANCE =new Singleton();
