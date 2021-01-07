@@ -34,7 +34,7 @@ public class SqrtX {
     public int mySqrt(int x) {//二分法解决
         int l=0,j=x,k=-1;
         while (l<=j){
-            int mid=1+(j-1)/2;
+            int mid=l+(j-l)/2;
             if ((long)mid*mid<=x){
                 k=mid;
                 l=mid+1;
