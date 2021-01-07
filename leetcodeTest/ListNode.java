@@ -3,8 +3,8 @@ package leetcodeTest;
 public class ListNode {
     int val;
     ListNode next=null;
-    ListNode(int x){
-        val =x;
+    public ListNode(int val){
+        val =val;
     }
     public static String print(ListNode l){
         StringBuilder stringBuilder = new StringBuilder();
