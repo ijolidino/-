@@ -1,3 +1,5 @@
+package leetcodeTest;
+
 import java.util.Arrays;
 
 public class test {
@@ -24,6 +26,14 @@ public class test {
         System.out.println("Count:"+secondCount+"/nnum:"+num);
     }
     public static void main(String[] args){
-        new test();
+        //new test();
+        int n=0111;
+        String res = Integer.toBinaryString(n);
+        System.out.println(res);
+        System.out.println(Integer.parseInt("1001", 2));
+
+        // 将字符串转换为数字进行打印，但不建议这么做，当为负数时，int型的表示不了32的一个整数，另外，int的位数有大小，打印的值超出范围就会报错
+        int in = Integer.parseInt(res);
+        System.out.print(in + "\n");
     }
 }
