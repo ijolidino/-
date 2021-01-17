@@ -28,7 +28,7 @@ package leetcodeTest.Easy;
  * 数组中不存在满足此条件的中心索引
  */
 public class pivotIndex {
-    class Solution {
+
         public int pivotIndex(int[] nums) {
             int sum = 0, leftsum = 0;
             for (int x: nums) sum += x;
@@ -38,7 +38,7 @@ public class pivotIndex {
             }
             return -1;
         }
-    }
+
 
     public static void main(String[] args) {
         System.out.println(new pivotIndex().pivotIndex(new int[]{-1,-1,-1,0,1,1}));
