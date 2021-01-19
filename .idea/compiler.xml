@@ -3,36 +3,6 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="ruoyi-system" />
-        <module name="springcloud-zuul-9527" />
-        <module name="ruoyi-generator" />
-        <module name="springcloud-consumerdept80" />
-        <module name="com.blackmagic.springcloud.client_3355" />
-        <module name="ruoyi-framework" />
-        <module name="ruoyi-common" />
-        <module name="springcloud-consumer-hystrix-dashboard" />
-        <module name="springcloud-config-dept-remote-8001" />
-        <module name="springcloud-config-remote-eureka" />
-        <module name="ruoyi-admin" />
-        <module name="springcloud-provider-dept-8001" />
-        <module name="springcloud-provider-dept-8002" />
-        <module name="springcloud-provider-dept-8003" />
-        <module name="spring-cloud-eureka-7003" />
-        <module name="shiro_test" />
-        <module name="spring-cloud-eureka-7002" />
-        <module name="spring-cloud-eureka-7001" />
-        <module name="springcloud-provider-dept-hystrix-8001" />
-        <module name="firstshirotest" />
-        <module name="springcloud-api" />
-        <module name="shiro" />
-        <module name="springboot_jsp_shiro" />
-        <module name="ruoyi-quartz" />
-        <module name="springcloud-config-server-3344" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="com.blackmagic" target="1.8" />
