@@ -2,6 +2,8 @@ package leetcodeTest.Easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Create by Fuwen on 2021/1/23
@@ -33,15 +35,14 @@ import java.util.Arrays;
  */
 public class checkIfExist {
     public boolean checkIfExist(int[] arr) {
-        int j=0;
-        Arrays.sort(arr);
-        for (int i = 0; i < arr.length-1; i++) {
-             j=i+1;
-            while (j<arr.length&&Math.abs(arr[j])<=Math.abs(2*arr[i])){
-                if (Math.abs(arr[j])==Math.abs(2*arr[i])){
-                    return true;
-                }
-                j++;
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        for(int i = 0; i < arr.length; i++){
+            map.put(arr[i], i);
+        }
+
+        for(int n = 0; n < arr.length; n++){
+            if(map.containsKey(arr[n]*2) && map.get(arr[n]*2) != n){
+                return true;
             }
         }
         return false;
