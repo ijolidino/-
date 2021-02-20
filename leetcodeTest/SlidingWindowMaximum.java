@@ -4,8 +4,7 @@ import javafx.collections.transformation.SortedList;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Vector;
+import java.util.Deque;
 
 /**
  * Create by Fuwen on 2021/1/2
@@ -47,27 +46,40 @@ import java.util.Vector;
  * 输出：[4]
  */
 public class SlidingWindowMaximum {
-    public int[] maxSlidingWindow(int[] nums, int k) {
-        int l=nums.length;
-        Vector<Integer> vector = new Vector<>();
-        int[] ints = new int[nums.length-k+1];
-        int a=0;
-        for (int i = 0; i <l-k+1; i++) {
-            a=i;
-            for (int j = 0; j < k; j++) {
-                vector.add(nums[a]);
-                a+=1;
+        public int[] maxSlidingWindow(int[] nums, int k) {
+            int len = nums.length;
+            if (len == 0 || len < k) {
+                return new int[0];
             }
-            Collections.sort(vector);
-            ints[i]=vector.get(k-1);
-            vector.removeAll(vector);
+            int[] res = new int[len - k + 1];
+
+            Deque<Integer> deque = new ArrayDeque<>(len - k + 1);
+            for (int i = 0; i < len; i++) {
+                // 判断队首元素是否移出滑动窗口
+                if (i >= k && !deque.isEmpty() && deque.peekFirst() == i - k) {
+                    deque.removeFirst();
+                }
+
+                // 依次判断待添加元素是否比队首元素大，注意可以取等号
+                while (!deque.isEmpty() && nums[deque.peekLast()] <= nums[i]) {
+                    deque.removeLast();
+                }
+
+                // 加入队列的是下标
+                deque.addLast(i);
+
+                if (i >= k - 1) {
+                    res[i - k + 1] = nums[deque.peekFirst()];
+                }
             }
-        return ints;
+            return res;
         }
+
+
 
     public static void main(String[] args) {
         for (int i :
-                new SlidingWindowMaximum().maxSlidingWindow(new int[]{-3,1,2},3)) {
+                new SlidingWindowMaximum().maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7},3)) {
             System.out.println(i);
         }
     }
