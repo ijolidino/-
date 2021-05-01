@@ -1,6 +1,8 @@
 package leetcodeTest;
 
 import java.util.ArrayDeque;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
  * Create by Fuwen on 2021/1/2
@@ -80,13 +82,42 @@ public class ValidParentheses {
             }
         return true;
     }
+    public boolean istoo(String s){
+        int n = s.length();
+        if (n<2) {
+            return false;
+        }
+        HashMap<Character, Character> map = new HashMap<>();
+        map.put(')','(');
+        LinkedList<Character> list = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            char a=' ';
+            if (s.charAt(i)=='('||s.charAt(i)==')'){
+                 a = s.charAt(i);
+                if (map.containsKey(a)) {
+                    if (list.isEmpty() || list.peek() != map.get(a)) {
+                        return false;
+                    }
+                    list.pop();
+                } else {
+                    list.push(a);
+                }
+            }
+
+        }
+        return list.isEmpty();
+    }
 
     public static void main(String[] args) {
 //        System.out.println(new ValidParentheses().isValid("()[]{}"));
 //        System.out.println(new ValidParentheses().isValid("([)]"));
 //        System.out.println(new ValidParentheses().isValid("{[]}"));
-        System.out.println(new ValidParentheses().isValid("(){}}{"));
-        System.out.println(new ValidParentheses().isValid("(){}}{{}"));
+//        System.out.println(new ValidParentheses().isValid("(){}}{"));
+//        System.out.println(new ValidParentheses().isValid("(){}}{{}"));
+        System.out.println(new ValidParentheses().istoo("(abc)"));
+        System.out.println(new ValidParentheses().istoo("(a+b(c-d))-(x-y)"));
+        System.out.println(new ValidParentheses().istoo("(abc))"));
+        System.out.println(new ValidParentheses().istoo("(a+b)-c)+(d"));
 
     }
 }
