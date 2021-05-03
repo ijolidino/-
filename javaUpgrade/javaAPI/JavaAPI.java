@@ -37,7 +37,7 @@ public class JavaAPI {
                 lowCalories) {
             lowCaloriesName.add(dish2.getName());
         }
-        System.out.println(Arrays.toString(lowCaloriesName.toArray()));
+            System.out.println(Arrays.toString(lowCaloriesName.toArray()));
         List<String> LowCaloriesName=dishes.stream().filter(d->d.getCalories()<50).sorted(Comparator.comparing(Dish::getCalories))
                 .map(Dish::getName).collect(Collectors.toList());
 
