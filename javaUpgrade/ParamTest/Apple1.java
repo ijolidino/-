@@ -2,16 +2,16 @@ package javaUpgrade.ParamTest;
 
 /**
  * @program: Testcode
- * @description: 苹果实体类
+ * @description: apple的同类
  * @author: Fuwen
- * @create: 2021-05-01 20:29
+ * @create: 2021-05-09 23:32
  **/
-public class Apple {
+public class Apple1 {
     private int weight;
 
     private String color;
 
-    public Apple(String color, Integer weight) {
+    public Apple1(String color, Integer weight) {
         this.weight=weight;
         this.color=color;
     }
